@@ -72,9 +72,11 @@ public class Option {
         if (this.product != null) {
             this.product.getOptions().remove(this);
         }
-        this.product = product;
-        if (product != null && !product.getOptions().contains(this)) {
-            product.getOptions().add(this);
+        if (product != null) {
+            this.product = product;
+            if (!product.getOptions().contains(this)) {
+                product.getOptions().add(this);
+            }
         }
     }
 
@@ -88,12 +90,6 @@ public class Option {
     }
 
     public void decreaseQuantity(int amount) {
-        if (this.quantity.getQuantity() <= amount){
-            this.quantity = new OptionQuantity(1);
-        }
-        else
-            this.quantity = new OptionQuantity(this.quantity.getQuantity() - amount);
+        this.quantity = new OptionQuantity(Math.max(1, this.quantity.getQuantity() - amount));
     }
-
-
 }
