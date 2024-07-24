@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Min;
 
 @Embeddable
 public class OptionQuantity {
+    private static final int QUANTITY_LIMIT = 99999999;
 
     private int quantity;
 
@@ -13,7 +14,7 @@ public class OptionQuantity {
     }
 
     public OptionQuantity(int quantity) {
-        if (quantity < 1 || quantity > 99999999) {
+        if (quantity < 1 || quantity > QUANTITY_LIMIT) {
             throw new IllegalArgumentException("옵션 수량은 1개 이상 1억 개 미만이어야 합니다.");
         }
         this.quantity = quantity;

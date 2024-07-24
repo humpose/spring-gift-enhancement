@@ -83,11 +83,29 @@ public class OptionService {
         optionRepository.deleteById(id);
     }
 
-    public void decreaseOptionQuantity(Long optionId, int amount) {
+    @Transactional
+    public boolean decreaseOptionQuantity(Long optionId, int amount) {
         Option option = optionRepository.findById(optionId)
             .orElseThrow(() -> new IllegalArgumentException("옵션을 찾을 수 없습니다."));
 
+        if (option.getQuantity().getQuantity() < amount) {
+            return false;
+        }
+
         option.decreaseQuantity(amount);
         optionRepository.save(option);
+        return true;
+    }
+
+    public String getOptionNameById(Long optionId) {
+        Option option = optionRepository.findById(optionId)
+            .orElseThrow(() -> new IllegalArgumentException("옵션을 찾을 수 없습니다."));
+        return option.getName().getName();
+    }
+
+    public int getRemainingQuantityById(Long optionId) {
+        Option option = optionRepository.findById(optionId)
+            .orElseThrow(() -> new IllegalArgumentException("옵션을 찾을 수 없습니다."));
+        return option.getQuantity().getQuantity();
     }
 }

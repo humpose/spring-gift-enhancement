@@ -44,7 +44,7 @@ public class Option {
         this.product = product;
     }
 
-        public Option(Long id,  OptionName name, OptionQuantity quantity) {
+    public Option(Long id,  OptionName name, OptionQuantity quantity) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
