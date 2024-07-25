@@ -103,9 +103,4 @@ public class OptionService {
         return option.getName().getName();
     }
 
-    public int getRemainingQuantityById(Long optionId) {
-        Option option = optionRepository.findById(optionId)
-            .orElseThrow(() -> new IllegalArgumentException("옵션을 찾을 수 없습니다."));
-        return option.getQuantity().getQuantity();
-    }
 }

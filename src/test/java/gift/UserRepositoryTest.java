@@ -2,6 +2,7 @@ package gift;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
+
 import gift.model.User;
 import gift.repository.UserRepository;
 import org.junit.jupiter.api.Test;

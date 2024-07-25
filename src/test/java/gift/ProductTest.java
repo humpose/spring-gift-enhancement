@@ -1,20 +1,15 @@
 package gift;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import gift.model.Name;
 import gift.model.Option;
-import gift.model.OptionName;
-import gift.model.OptionQuantity;
 import gift.model.Product;
-import gift.repository.OptionRepository;
-import gift.repository.ProductRepository;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 @DataJpaTest
 class ProductTest {

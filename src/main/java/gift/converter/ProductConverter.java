@@ -1,11 +1,7 @@
 package gift.converter;
 
-import gift.dto.CategoryDTO;
-import gift.dto.NameDTO;
 import gift.dto.OptionDTO;
 import gift.dto.ProductDTO;
-import gift.model.Category;
-import gift.model.Name;
 import gift.model.Option;
 import gift.model.Product;
 import java.util.List;

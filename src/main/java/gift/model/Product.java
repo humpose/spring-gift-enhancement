@@ -12,7 +12,6 @@ import jakarta.persistence.Table;
 import jakarta.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 @Entity

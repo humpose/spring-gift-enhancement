@@ -3,7 +3,6 @@ package gift;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import gift.model.Name;
 import gift.model.Option;
@@ -12,14 +11,12 @@ import gift.model.OptionQuantity;
 import gift.model.Product;
 import gift.repository.OptionRepository;
 import gift.repository.ProductRepository;
-import jakarta.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.annotation.Rollback;
 
 @DataJpaTest
 class OptionRepositoryTest {

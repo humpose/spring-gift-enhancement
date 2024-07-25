@@ -1,8 +1,6 @@
 package gift.model;
 
 import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 
 @Embeddable
 public class OptionQuantity {
